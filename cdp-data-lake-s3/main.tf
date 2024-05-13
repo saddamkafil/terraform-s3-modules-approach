@@ -26,6 +26,5 @@ terraform {
   backend "s3" {
     bucket = "saddam-tf-state"
     key    = "tf-state/dev"
-    region = "ap-southeast-4"
   }
 }
