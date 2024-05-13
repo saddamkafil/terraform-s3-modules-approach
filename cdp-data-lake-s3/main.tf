@@ -1,6 +1,6 @@
 module "cdp-data-lake" {
     source = "../modules/s3"
-    bucket_name = "saddam-modulet-test-s3-bucket"
+    bucket_name = "saddam-modulet-test-s3-bucket-atlantis"
     tag_name = "test"
     environment_tag = "env-test"
     versioning_status = "Disabled"
