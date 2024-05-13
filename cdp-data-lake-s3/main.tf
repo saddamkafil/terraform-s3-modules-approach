@@ -25,7 +25,7 @@ module "cdp-data-lake" {
 terraform {
   backend "s3" {
     bucket = "saddam-tf-state"
-    key    = "tf-state/"
-    region = "us-east-1"
+    key    = "tf-state/dev"
+    region = "ap-southeast-4"
   }
 }
