@@ -22,3 +22,10 @@ module "cdp-data-lake" {
     bucket_lifecycle_configuration = true
     delete_days_after_inititation = "7"
 }
+terraform {
+  backend "s3" {
+    bucket = "saddam-tf-state"
+    key    = "tf-state/"
+    region = "us-east-1"
+  }
+}
