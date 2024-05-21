@@ -1,6 +1,6 @@
 module "cdp-data-lake" {
     source = "../modules/s3"
-    bucket_name = "saddam-modulet-test-s3-bucket2"
+    bucket_name = "saddam-corrected-state-s3"
     tag_name = "test"
     environment_tag = "env-test"
     versioning_status = "Disabled"
@@ -15,7 +15,7 @@ module "cdp-data-lake" {
     ignore_public_acls = "true"
     create_bucket_policy = false
     policy = "na"
-    managed_by_tag = "managed-tag-terragrunt-test"
+    managed_by_tag = "corrected-s3-state"
     restrict_public_buckets = "true"
     rule_id = "delete-incomplete-multipart-uploads-7days"
     lifiecycle_rule_status = "Disabled"
