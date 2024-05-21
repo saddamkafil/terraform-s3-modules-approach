@@ -1,6 +1,6 @@
 module "cdp-data-lake" {
     source = "../modules/s3"
-    bucket_name = "saddam-modulet-test-s3-bucket"
+    bucket_name = "saddam-modulet-test-s3-bucket4"
     tag_name = "test"
     environment_tag = "env-test"
     versioning_status = "Disabled"
@@ -25,7 +25,8 @@ module "cdp-data-lake" {
 terraform {
   backend "s3" {
     bucket = "saddam-tf-state"
-    key    = "tf-state/"
-    region = "us-east-1"
+    key    = "tf-state/dev"
+    region = "ap-south-1"
+    role_arn = "arn:aws:iam::102637054225:role/eksallnode"
   }
 }
