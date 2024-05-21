@@ -26,7 +26,7 @@ terraform {
   backend "s3" {
     bucket = "saddam-tf-state"
     key    = "tf-state/dev"
-    region = "ap-southeast-2"
+    region = "ap-south-1"
     role_arn = "arn:aws:iam::102637054225:role/eksallnode"
   }
 }
