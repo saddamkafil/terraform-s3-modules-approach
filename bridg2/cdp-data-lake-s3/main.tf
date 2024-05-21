@@ -1,6 +1,6 @@
 module "cdp-data-lake" {
     source = "../modules/s3"
-    bucket_name = "saddam-modulet-test-s3-bucket"
+    bucket_name = "saddam-modulet-test-s3-bucket2"
     tag_name = "test"
     environment_tag = "env-test"
     versioning_status = "Disabled"
@@ -21,11 +21,4 @@ module "cdp-data-lake" {
     lifiecycle_rule_status = "Disabled"
     bucket_lifecycle_configuration = true
     delete_days_after_inititation = "7"
-}
-terraform {
-  backend "s3" {
-    bucket = "saddam-tf-state"
-    key    = "tf-state/"
-    region = "us-east-1"
-  }
 }
