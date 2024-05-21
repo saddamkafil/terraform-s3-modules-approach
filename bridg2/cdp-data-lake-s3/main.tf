@@ -15,7 +15,7 @@ module "cdp-data-lake" {
     ignore_public_acls = "true"
     create_bucket_policy = false
     policy = "na"
-    managed_by_tag = "managed-tag"
+    managed_by_tag = "managed-tag-terragrunt-test"
     restrict_public_buckets = "true"
     rule_id = "delete-incomplete-multipart-uploads-7days"
     lifiecycle_rule_status = "Disabled"
