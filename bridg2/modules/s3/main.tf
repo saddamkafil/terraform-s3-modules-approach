@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
-  tags = {
-    Name        = var.tag_name
-    Environment = var.environment_tag
-    ManagedBy   = var.managed_by_tag
-  }
+  tags = merge (
+    var.create_tag_name ? { Name = var.tag_name} :{},
+    var.create_environment_tag ? { Environmrnt = var.environment_tag} : {},
+    var.create_managed_by_tag ? { ManagedBy   = var.managed_by_tag } : {}
+  )
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "bucket" {
