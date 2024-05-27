@@ -97,3 +97,15 @@ variable "lifiecycle_rule_status" {
 variable "bucket_lifecycle_configuration" {
   description = "Enter false to not configure and true to cnfigure"
 }
+
+variable "create_tag_name" {
+  description = "Enter true or false"
+}
+
+variable "create_environment_tag" {
+  description = "enter true or false"
+}
+
+variable "create_managed_by_tag" {
+  description = "Enter true or false"
+}
